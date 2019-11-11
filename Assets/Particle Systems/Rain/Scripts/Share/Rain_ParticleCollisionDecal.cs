@@ -21,7 +21,7 @@ public class Rain_ParticleCollisionDecal : MonoBehaviour
     List<GameObject> collidedGameObjects = new List<GameObject>();
     bool canUpdateCollisionDetect;
     float collisionDetectTime = 0.2f;
-    float currentCollisionTime;
+    public float currentCollisionTime;
     Vector3 prevPos;
     Vector3 currentDirection;
 
@@ -57,10 +57,14 @@ public class Rain_ParticleCollisionDecal : MonoBehaviour
         if (LookAtForward)
         {
             var tempDir = transform.position - prevPos;
+
             if (tempDir.magnitude > 0.001f) currentDirection = tempDir;
             else currentDirection = transform.forward;
+
             prevPos = transform.position;
             currentDirection.y = 0;
+
+
         }
 
         if (!InstantiateWhenZeroSpeed || !canUpdateCollisionDetect) return;
