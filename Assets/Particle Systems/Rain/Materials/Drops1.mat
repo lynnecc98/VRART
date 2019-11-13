@@ -55,4 +55,4 @@ Material:
     - _Emission: {r: 0, g: 0, b: 0, a: 0}
     - _ReflectColor: {r: 0.81531143, g: 0.8511812, b: 0.9558824, a: 1}
     - _SpecColor: {r: 0.3455882, g: 0.6208924, b: 1, a: 1}
-    - _TintColor: {r: 0.75, g: 0.88620687, b: 1, a: 1}
+    - _TintColor: {r: 1, g: 0.15532227, b: 0, a: 1}

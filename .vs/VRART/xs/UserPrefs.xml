@@ -1,0 +1,35 @@
+﻿<Properties StartupConfiguration="{D6838EE3-0A96-E86D-524E-1B37B9ADD953}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/RainScript.cs">
+    <Files>
+      <File FileName="Assets/Scripts/RainScript.cs" Line="34" Column="9" />
+      <File FileName="Assets/Particle Systems/Rain/Scripts/Share/Rain_ParticleCollisionDecal.cs" Line="47" Column="38" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="VRART" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Particle Systems" expanded="True">
+                <Node name="Rain" expanded="True">
+                  <Node name="Scripts" expanded="True">
+                    <Node name="Share" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+              <Node name="Scripts" expanded="True">
+                <Node name="RainScript.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="eddce933-b873-4806-9490-5a469a7bb8c3" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
