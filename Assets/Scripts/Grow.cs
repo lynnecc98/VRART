@@ -4,15 +4,17 @@ using UnityEngine;
 
 public class Grow : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float x = 0.01f;
+    public float y = 0.01f;
+    public float z = 0.01f;
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKey(KeyCode.A)) {
+            transform.localScale += new Vector3(x, y, z);
+            transform.position += new Vector3(0f,y/2);
+        }
     }
+
+
 }
