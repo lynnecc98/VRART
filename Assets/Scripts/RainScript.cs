@@ -11,19 +11,15 @@ public class RainScript : MonoBehaviour
     public ParticleSystem.MinMaxCurve rotation;
 
     public GameObject particle;
-    public Vector3 two_pos;
 
     private ParticleSystem ps;
     public float hSliderValue = 1.0F;
-    public GameObject cube;
 
 
     // Start is called before the first frame update
     void Start()
     {
         print("do something");
-        two_pos = new Vector3(-12, -1, 22);
-        cube = GameObject.FindGameObjectWithTag("pos");
 
         ps = GetComponent<ParticleSystem>();
     }
@@ -32,17 +28,9 @@ public class RainScript : MonoBehaviour
     void Update()
     {
         
-        Physics.gravity = cube.transform.position - transform.position;
+        //Physics.gravity = cube.transform.position - transform.position;
 
-
-        if (Input.GetButtonDown("Fire1"))
-        {
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray))
-                print(transform.position);
-                //Instantiate(particle, transform.position, transform.rotation);
-        }
-
+        
 
 
 
