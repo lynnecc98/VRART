@@ -284,3 +284,7 @@ C:\sunggeun\VRART\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
 C:\sunggeun\VRART\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\sunggeun\VRART\obj\Debug\Assembly-CSharp.dll
 C:\sunggeun\VRART\obj\Debug\Assembly-CSharp.pdb
+C:\sunggeun\VRART\Temp\bin\Debug\Unity.Postprocessing.Editor.dll
+C:\sunggeun\VRART\Temp\bin\Debug\Unity.Postprocessing.Runtime.dll
+C:\sunggeun\VRART\Temp\bin\Debug\Unity.Postprocessing.Editor.pdb
+C:\sunggeun\VRART\Temp\bin\Debug\Unity.Postprocessing.Runtime.pdb
