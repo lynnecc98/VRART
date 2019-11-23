@@ -45,6 +45,7 @@ public class Raycast_hand : MonoBehaviour
             if (raycastHit.collider.tag.Equals("Respawn"))
             {
                 hitPosition = raycastHit.point;
+                hitPosition.y += 0.001f;
                 cube.transform.localPosition = hitPosition;
             }
         }

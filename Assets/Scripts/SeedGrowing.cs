@@ -12,7 +12,7 @@ public class SeedGrowing : MonoBehaviour
     public float maxScale = 1.0f;
     public float minScale = 0.1f;
     public float scaleFactor;
-    public Vector3 scale;
+    public Vector3 defaultScale;
     public Vector3 position;
     public float defaultY_pos = 0;
     public bool isRainDrop = false;
@@ -20,13 +20,13 @@ public class SeedGrowing : MonoBehaviour
     void Start()
     {
         age = transform.localScale.x / seedSize;
+        defaultScale = transform.localScale;
 
         scaleFactor = seedSize * age;
         position = new Vector3(transform.localPosition.x, transform.localPosition.y, transform.localPosition.z);
-        defaultY_pos = position.y + scaleFactor / 2; ;
+        defaultY_pos = position.y + scaleFactor;
         
-        scale = new Vector3(minScale, minScale, minScale);
-        transform.localScale = scale;
+        transform.localScale = defaultScale * minScale;
         
     }
 
@@ -53,13 +53,10 @@ public class SeedGrowing : MonoBehaviour
 
         scaleFactor = seedSize * age;
         if (scaleFactor < minScale) scaleFactor = minScale;
-        scale.x = scaleFactor;
-        scale.y = scaleFactor;
-        scale.z = scaleFactor;
-        transform.localScale = scale;
+        transform.localScale = defaultScale*scaleFactor;
 
 
-        position.y = defaultY_pos - scale.y / 2;
+        //position.y = defaultY_pos - transform.localScale.y;
         transform.localPosition = position;
 
 
