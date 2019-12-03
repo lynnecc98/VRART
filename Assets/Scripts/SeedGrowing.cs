@@ -64,21 +64,21 @@ public class SeedGrowing : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "pos")
+        if (other.gameObject.tag == "Respawn")
         {
             isRainDrop = true;
         }
     }
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.tag == "pos")
+        if (other.gameObject.tag == "Respawn")
         {
             isRainDrop = true;
         }
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject.tag == "pos")
+        if (other.gameObject.tag == "Respawn")
         {
             isRainDrop = false;
         }
