@@ -17,7 +17,10 @@ public class RainDropEffect : MonoBehaviour
     {
         directionalLight = GetComponentInChildren<Light>();
 
+        //starting light color
         blueLight = new Color(0.3f, 0.7f, 1);
+
+        //brightened color 
         brightLight = new Color(0.97f,0.87f,0.7f);
         directionalLight.color = blueLight;
         elapsedTime = 0; 
