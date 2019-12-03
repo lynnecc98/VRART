@@ -64,7 +64,6 @@ public class RainDropEffect : MonoBehaviour
         if (other.gameObject.tag == "Respawn")
         {
             isGettingBright = false;
-            elapsedTime = 0;
         }
 
     }
