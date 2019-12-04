@@ -578,3 +578,4 @@ C:\sunggeun\VRART2\VRART\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cach
 C:\sunggeun\VRART2\VRART\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\sunggeun\VRART2\VRART\obj\Debug\Assembly-CSharp.dll
 C:\sunggeun\VRART2\VRART\obj\Debug\Assembly-CSharp.pdb
+C:\sunggeun\VRART2\VRART\Temp\bin\Debug\Assembly-CSharp-firstpass.pdb

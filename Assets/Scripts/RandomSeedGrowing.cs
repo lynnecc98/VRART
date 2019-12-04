@@ -1,12 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Diagnostics;
 
 public class RandomSeedGrowing : MonoBehaviour
 {
     public float seedSize = 1;
     public int growingTime = 3; //비 올 때 다 자랄때 까지 걸리는 시간
     public int shrinkTime = 10; //다시 수축하는 데 걸리는 시간
+    public int shrinkAfter = 45 * 1000; //milisecond scale
+    Stopwatch shrinkTimer;
     public float age;
 
     public float maxScale = 1.0f;
@@ -19,10 +22,12 @@ public class RandomSeedGrowing : MonoBehaviour
     GameObject randomPlant;
     private bool isRegenerated = false;
 
+
     private string[] plantList = { "BluePoppyCluster", "Bush_A", "Bush_B", "ChervilCluster", "DaisyCluster", "DandelionCluster", "ElephantEar_A", "ElephantEar_B", "FAE_Birch_A", "FAE_Birch_B", "FAE_Birch_C", "FAE_Spruce_A", "FAE_Spruce_B", "FAE_Spruce_C", "Fern", "Grass", "GrassPatch", "GrassTall", "GrassThick" };
     // Start is called before the first frame update
     void Start()
     {
+        shrinkTimer = new Stopwatch();
         age = transform.localScale.x / seedSize;
         defaultScale = transform.localScale;
 
@@ -51,6 +56,14 @@ public class RandomSeedGrowing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (shrinkTimer.IsRunning)
+        {
+            if(shrinkTimer.ElapsedMilliseconds >= shrinkAfter)
+            {
+                shrinkTimer.Stop();
+                isRainDrop = false;
+            }
+        }
         if (isRainDrop)
         {
             age += Time.deltaTime / growingTime;
@@ -95,6 +108,10 @@ public class RandomSeedGrowing : MonoBehaviour
         if (other.gameObject.tag == "pos")
         {
             isRainDrop = true;
+            if (shrinkTimer.IsRunning)
+            {
+                shrinkTimer.Stop();
+            }
         }
     }
     private void OnTriggerStay(Collider other)
@@ -108,7 +125,8 @@ public class RandomSeedGrowing : MonoBehaviour
     {
         if (other.gameObject.tag == "pos")
         {
-            isRainDrop = false;
+            //isRainDrop = false;
+            shrinkTimer.Start();
         }
 
     }
