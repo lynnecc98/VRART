@@ -37469,8 +37469,8 @@ PrefabInstance:
       value: Sunshafts (1)
       objectReference: {fileID: 0}
     - target: {fileID: 136104, guid: 45f02fac56c35b04cbc6e3f023384597, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+      propertyPath: m_TagString
+      value: sunShaft
       objectReference: {fileID: 0}
     - target: {fileID: 434002, guid: 45f02fac56c35b04cbc6e3f023384597, type: 3}
       propertyPath: m_LocalPosition.x
@@ -37535,6 +37535,11 @@ PrefabInstance:
     - target: {fileID: 19842240, guid: 45f02fac56c35b04cbc6e3f023384597, type: 3}
       propertyPath: InitialModule.startSizeZ.minMaxState
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 198000011215788738, guid: 45f02fac56c35b04cbc6e3f023384597,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 45f02fac56c35b04cbc6e3f023384597, type: 3}
