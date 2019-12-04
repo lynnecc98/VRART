@@ -12,10 +12,16 @@ public class RainDropEffect : MonoBehaviour
     public float elapsedTime;
     public float duration = 10;
 
+    Color shaftStartColor, shaftColor;
+
+    GameObject sunShaft;
+
+
     // Start is called before the first frame update
     void Start()
     {
         directionalLight = GetComponentInChildren<Light>();
+        sunShaft = GameObject.FindGameObjectWithTag("sunShaft");
 
         //starting light color
         blueLight = new Color(0.3f, 0.7f, 1);
@@ -29,7 +35,18 @@ public class RainDropEffect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        directionalLight.color = Color.Lerp(blueLight, brightLight, Mathf.PingPong(elapsedTime / duration, 1));
+        float interpolateRate = Mathf.PingPong(elapsedTime / duration, 1);
+
+        directionalLight.color = Color.Lerp(blueLight, brightLight, interpolateRate);
+        if(interpolateRate > 0.8f)
+        {
+            sunShaft.SetActive(true);
+        }
+        else
+        {
+            sunShaft.SetActive(false);
+        }
+        
 
         if (isGettingBright)
         {

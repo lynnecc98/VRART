@@ -6,7 +6,7 @@ public class RandomSeedGrowing : MonoBehaviour
 {
     public float seedSize = 1;
     public int growingTime = 3; //비 올 때 다 자랄때 까지 걸리는 시간
-    public int shrinkTime = 10; //다시 수축하는 데 걸리는 시간
+    public int shrinkTime = 1000000; //다시 수축하는 데 걸리는 시간
     public float age;
 
     public float maxScale = 1.0f;
