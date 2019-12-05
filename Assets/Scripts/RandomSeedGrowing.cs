@@ -126,6 +126,7 @@ public class RandomSeedGrowing : MonoBehaviour
         if (other.gameObject.tag == "pos")
         {
             //isRainDrop = false;
+            shrinkTimer.Reset();
             shrinkTimer.Start();
         }
 
