@@ -8,6 +8,9 @@ public class TitleScript : MonoBehaviour
 
     public GameObject TitleScreen;
     private bool Show = false;
+    private bool timerOn = true;
+    public int counter = 0;
+    public int disappearTime = 80 * 1000000;
 
     // Use this for initialization
     void Start()
@@ -18,6 +21,14 @@ public class TitleScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (timerOn) {
+            counter++;
+        }
+        
+        if (counter >= disappearTime) {
+            timerOn = false;
+            TitleScreen.SetActive(false);
+        }
 
     }
 
